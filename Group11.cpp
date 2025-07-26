@@ -26,14 +26,14 @@ int main(){
     while (true) {
         cout << "Enter your current age: ";
         if (cin >> age && age >= 0) break;
-        cout << "Invalid input, your age should be a non-negative number.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter your planned retirement age: ";
         if (cin >> retireAge && retireAge > age) break;
-        cout << "Retirement age should be greater than current age.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
@@ -41,50 +41,50 @@ int main(){
 
     while (true) {
         cout << "Enter your life expectancy: ";
-        if (cin >> lifeExpectancy && lifeExpectancy > retireAge) break;
-        cout << "Life expectancy should be greater than retirement age.\n";
+        if (cin >> lifeExpectancy && lifeExpectancy > retireAge && lifeExpectancy < 150) break;
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter your current savings ($): ";
         if (cin >> currentSavings && currentSavings >= 0) break;
-        cout << "Invalid input, must be non-negative.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter your annual retirement contribution ($): ";
         if (cin >> AnnualRetireContribu && AnnualRetireContribu >= 0) break;
-        cout << "Invalid input, must be non-negative.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter your expected annual return rate (as %): ";
         if (cin >> annualReturnRate && annualReturnRate >= 0) break;
-        cout << "Invalid input, must be non-negative.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter the inflation rate (as %): ";
         if (cin >> inflationrate && inflationrate >= 0) break;
-        cout << "Invalid input, must be non-negative.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter your current income ($): ";
         if (cin >> currentIncome && currentIncome >= 0) break;
-        cout << "Invalid input, must be non-negative.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 
     while (true) {
         cout << "Enter the income needed per year after retirement (in today's dollars) ($): ";
         if (cin >> incomeNeedFRetire && incomeNeedFRetire >= 0) break;
-        cout << "Invalid input, must be non-negative.\n";
+        cout << "Invalid input\n";
         clearInput();
     }
 	
