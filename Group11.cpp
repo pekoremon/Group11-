@@ -137,19 +137,19 @@ int main(){
 	cout<<">>> John Tan is on track for retirement! \n\n";
 	
 	//Part F: Enhancement
-    cout<<"The amount you have: $"<<static_cast<int>(futureSavings)<<'\n';
-    cout<<"You plan to withdraw: $"<<static_cast<int>(fixedPurchasingWithdrawal)<<" / month\n";
-    cout<<"Average investment return: "<<static_cast<int>(annualReturnRate)<<'%'<<'\n';
+    	cout<<"The amount you have: $"<<static_cast<int>(futureSavings)<<'\n';
+    	cout<<"You plan to withdraw: $"<<static_cast<int>(fixedPurchasingWithdrawal)<<" / month\n";
+    	cout<<"Average investment return: "<<static_cast<int>(annualReturnRate)<<'%'<<'\n';
 	cout<<"\nResult:\n";
     
-    double months = log(fixedPurchasingWithdrawal / (fixedPurchasingWithdrawal - futureSavings * annualReturnRate/12/100))
+	double months = log(fixedPurchasingWithdrawal / (fixedPurchasingWithdrawal - futureSavings * annualReturnRate/12/100))
                      / log(1 + annualReturnRate/12/100);
 
-    int years = static_cast<int>(months) / 12;
-    double remainingMonths = fmod(months, 12);
+    	int years = static_cast<int>(months) / 12;
+    	double remainingMonths = fmod(months, 12);
 
-    cout << "If withdraw $" << static_cast<int>(fixedPurchasingWithdrawal) << " per month, $" << static_cast<int>(futureSavings) 
-         << " can last " << years << " years and " <<fixed << setprecision(1)<< remainingMonths << " months.\n";
+    	cout << "If withdraw $" << static_cast<int>(fixedPurchasingWithdrawal) << " per month, $" << static_cast<int>(futureSavings) 
+         	<< " can last " << years << " years and " <<fixed << setprecision(1)<< remainingMonths << " months.\n";
 
 
 	return 0;
